@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+
+}
+body{
+
+    background-color: rgb(0, 0, 0) ;
+}
+.logo{
+    font-size: 40px;
+    padding: 20px;
+    margin: 10px;
+
+}
+.active{
+    cursor: pointer;
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+.navbar{
+    position: absolute ;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    color: whitesmoke;
+}
+.nav-links{
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li{
+    margin: 0 30px;
+}
+
+header{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./images/Lionmain.jpeg');
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end ;
+    justify-content: center;
+}
+
+.header-content{
+    margin-bottom: 150px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.header-content h1{
+    font-size: 7vmin;
+    margin-top: 50px;
+    margin-bottom: 30px; 
+
+   
+}
+.line{
+    width: 150px;
+    height: 4px;
+    background: black;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+.ctn {
+    padding: 8px 15px;
+    background: crimson;
+    border-radius: 30px;
+    color: whitesmoke;
+}
+.lion{
+    text-align: center;
+    font-size: 4vmin;
+}
+
+.living{
+    text-align: center;
+    font-size: 4vmin;
+}
+
+.hunting{
+    text-align: center;
+    font-size: 4vmin;
+}
+
+.container{
+    padding: 20px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.aboutlion{
+    background-color: rgba(182, 115, 14);
+    border-radius: 20px;
+    margin: 10px;
+    padding: 20px;
+}
+.habitat{
+    background-color: rgb(182, 115, 14);
+    border-radius: 20px;
+    margin: 10px;
+    padding: 20px
+}
+
+.prides{
+    background-color: rgb(182, 115, 14);
+    border-radius: 20px;
+    margin: 10px;
+    padding: 20px
+}
+
+.aboutlion-content{
+
+text-align: center;
+padding: 10px;
+}
+
+
+.habitat-content{
+    text-align: center;
+    padding: 10px;
+}
+
+.hunting-content{
+    text-align: center;
+    padding: 10px;
+}
+
+.lionimg{
+    justify-content: center;
+}
+
+.lioninfo{
+    font-family: sans-serif;
+    font-size: 20px;
+    
+}
+
+.habitatinfo{
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.huntinginfo{
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+footer{
+    padding-left: 20px;
+    color: wheat;
+    text-align:center;
+    font-family: monospace;
+}
+

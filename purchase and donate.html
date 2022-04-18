@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dehiwala Zoo</title>
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="home.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <section class="header">
+            <nav>
+                <a href="home.html"><img src="images/logo-removebg-preview.png"></a>
+                <div class="nav-links">
+                    <i class="fa fa-times-circle" ></i>
+                    <ul>
+                        <li><a href="./index.html">HOME</a></li>
+                        <li><a href="./animals and plants.html">ANIMALS AND PLANTS</a></li>
+                        <li><a href="./activties.html">ACTIVITIES</a></li>
+                        <li><a href="./purchase and donate.html">PURCHASE AND DONATE</a></li>
+                        <li><a href="./contact us.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" ></i>
+
+            </nav>
+
+            <div class="text-box">
+                <h1>Purchase and Donate</h1>
+            </div> 
+
+        </section>
+
+        <section>
+          <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Invoice</title>
+        <script src="invoice_process.js"></script>
+    </head>
+    <body>
+
+      <div class="container">
+        <div class="row">
+          <div class="card">
+            <div class="card-body">
+            <div class="card-title">
+              <h1>Purchase Tickets</h1>
+            </div>
+            <div class="card-text">
+            <form id="frmPurchase">
+                  Visitor Type : 
+                  <select id="cmbPrd" onchange="calculateCost();">
+                      <option value="">--Select Here--</option>
+                      <option value="0">Adult</option>
+                      <option value="1">Children</option>
+                  </select>
+                  <br />
+                  <br />
+                  Ticket Type : 
+                  <select id="cmTick" onchange="calculateCost();">
+                      <option value="">--Select Here--</option>
+                      <option value="0">Day</option>
+                      <option value="1">Student</option>
+                      <option value="2">Foreigner</option>
+                    </select>
+                  <br />
+                  <br />
+                  Duration: 
+                  <select id="cmDur" onchange="calculateCost();">
+                      <option value="">--Select Here--</option>
+                      <option value="0">Half Day</option>
+                      <option value="1">3 Hours</option>
+                      <option value="2">Full day</option>
+                      <option value="3">2 Days</option>
+                  </select>
+
+                  Number of tickets: 
+                  <input type="text" name="Tick" id="Tick" onchange="calculateCost();">
+
+                  Total
+                  <span id="Cost">0.00</span>
+
+                  <input type="button" value="Add to Order" onclick="addToOrder();" />
+            </form>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+       <div id="divOrder" style="display: none;">
+        <hr />
+        <h1>Overall Order</h1>
+        <table width="50%" id="tbl_order" class="table-responsive">
+            <thead
+            class="thead-bold">
+                <tr>
+                    <th>Visitor Type:</th>
+                    <th>Ticket Type:</th>
+                    <th>Duration</th>
+                    <th>Number of Tickets</th>
+                    <th>Total</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="tbody_order"></tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="4">Grand Total</th>
+                    <th colspan="2" id="thGrandTot">0.00</th>
+                </tr>
+            </tfoot>
+        </table>
+        <input type="button" value="Place Order" />
+       </div>
+    </body>
+</html>
+        </section>
+      <!------------------------DONATION PAGE----------------------->
+
+      <div class="wrapper">
+        <h2>Donation Form</h2>
+        <form method="POST">
+          <h4>Account</h4>
+          <div class="input-group">
+            <div class="input-box">
+              <input type="text" placeholder="Full name" required class="name">
+              <i class="fa fa-user icon"> </i>
+            </div>
+            <div class="input-group">
+              <div class="input-box">
+                <input type= "email" placeholder="Email Address" required class="name">
+                <i class="fa fa-envelope"></i>
+              </div>
+            </div>
+            <div class="input-group">
+              <div class="input-box">
+                <h4>Donation details</h4>
+                <div class="input-group">
+                  <div class="input-box">
+                    <select name="Amount" id="amount">
+                      <option value="0">100 LKR</option>
+                      <option value="1">250 LKR</option>
+                      <option value="2">500 LKR</option>
+                      <option value="3">1000 LKR</option>
+                      <option value="4">2500 LKR</option>
+                      <option value="5">5000 LKR</option>
+                      <option value="6">10,000 LKR</option>
+                    </select>
+                  </div>
+                </div>
+                <input type="radio" name="pay" id="bc1" checked class="radio">
+                <label for="bc1"><span><i class="fa fa-cc-visa"></i>Credit Card></span></label>
+                <input type="radio" name="pay" id="bc2"><span><i class="fa fa-cc-paypal"></i>PayPal</span>
+              </div>
+            </div>
+            <div class="input-group">
+              <div class="input-box">
+                <input type="tel" placeholder="Card Number" required class="name">
+                <i class=" fa fa-credit-card icon"></i>
+              </div>
+            </div>
+           <div class="input-group">
+             <div class="input-box">
+               <input type="tel" placeholder="Card CVC" required class="name">
+               <i class="fa fa-user icon"></i>
+             </div>
+           </div>
+           <div class="input-box">
+             <select>
+               <option>01 Jun</option>
+               <option>02 Jun</option>
+               <option>03 Jun</option>
+             </select>
+             <select>
+               <option>2020</option>
+               <option>2021</option>
+               <option>2022 </option>
+             </select>
+           </div>
+          </div>
+         <div class ="input-group">
+           <div class="input-box">
+             <button type="submit" onclick="donate();"> Donate</button>
+           </div>
+         </div> 
+        </form>
+      </div>
+
+  
+
+        <script src =purchaseAndDonate.js></script>
+    </body>
+
+    <footer>
+        <section class="footer">
+
+            <h2>Contact Us</h2>
+            <p>Department Of National Zoological Gardens<br>
+                Anagarika Dharmapala mawatha
+                Dehiwala</p>
+            <p>General : +94 112712751<br>
+                Fax : +94 112734542</p> 
+                 
+            <p><a href="http://nationalzoo.gov.lk/">For more information: Click me </a></p> 
+        </section>
+
+        </footer>
+        
+</html>
